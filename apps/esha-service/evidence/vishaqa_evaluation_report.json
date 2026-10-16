@@ -1,0 +1,227 @@
+{
+  "summary": {
+    "total_cases": 8,
+    "passed": 8,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "corrections_logged": 0,
+    "by_category": {
+      "support": {
+        "total": 8,
+        "passed": 8
+      }
+    },
+    "rule_version": "ai-eval-v1.0",
+    "generated_at": "2026-08-27T12:26:04.789144+00:00"
+  },
+  "results": [
+    {
+      "case_id": "viqasha-01",
+      "module": "viqasha",
+      "category": "support",
+      "passed": true,
+      "actual_output": {
+        "product": "Security",
+        "category": "Password reset/login access issue",
+        "severity": "High",
+        "owner_team": "Security/Admin",
+        "confidence": 0.9,
+        "human_required": true,
+        "priority": 20,
+        "service_version": "v1.0"
+      },
+      "expected_output": {
+        "product": "Security",
+        "human_required": true
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T12:25:50.472115+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "viqasha-02",
+      "module": "viqasha",
+      "category": "support",
+      "passed": true,
+      "actual_output": {
+        "product": "Financial",
+        "category": "Refund/billing dispute",
+        "severity": "High",
+        "owner_team": "Account Manager",
+        "confidence": 0.93,
+        "human_required": true,
+        "priority": 40,
+        "service_version": "v1.0"
+      },
+      "expected_output": {
+        "product": "Financial",
+        "human_required": true
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T12:25:52.514350+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "viqasha-03",
+      "module": "viqasha",
+      "category": "support",
+      "passed": true,
+      "actual_output": {
+        "product": "FBR Digital Invoicing",
+        "category": "Invoice won't post/gateway error",
+        "severity": "Critical",
+        "owner_team": "Oracle/FBR Integration Support",
+        "confidence": 0.92,
+        "human_required": false,
+        "priority": 80,
+        "service_version": "v1.0"
+      },
+      "expected_output": {
+        "product": "FBR Digital Invoicing",
+        "human_required": false
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T12:25:54.557487+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "viqasha-04",
+      "module": "viqasha",
+      "category": "support",
+      "passed": true,
+      "actual_output": {
+        "product": "POS",
+        "category": "POS not scanning/printing",
+        "severity": "High",
+        "owner_team": "POS Product Support",
+        "confidence": 0.82,
+        "human_required": false,
+        "priority": 90,
+        "service_version": "v1.0"
+      },
+      "expected_output": {
+        "product": "POS",
+        "human_required": false
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T12:25:56.611818+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "viqasha-05",
+      "module": "viqasha",
+      "category": "support",
+      "passed": true,
+      "actual_output": {
+        "product": "Production Outage",
+        "category": "Critical production system down",
+        "severity": "Critical",
+        "owner_team": "Director/Escalation",
+        "confidence": 0.93,
+        "human_required": true,
+        "priority": 50,
+        "service_version": "v1.0"
+      },
+      "expected_output": {
+        "product": "Production Outage",
+        "human_required": true
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T12:25:58.643271+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "viqasha-06",
+      "module": "viqasha",
+      "category": "support",
+      "passed": true,
+      "actual_output": {
+        "product": "Unclassified",
+        "category": "Needs manual review",
+        "severity": "Medium",
+        "owner_team": "General Support",
+        "confidence": 0.4,
+        "human_required": true,
+        "priority": 100,
+        "service_version": "v1.0"
+      },
+      "expected_output": {
+        "product": "Unclassified",
+        "human_required": true
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T12:26:00.708195+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "viqasha-07",
+      "module": "viqasha",
+      "category": "support",
+      "passed": true,
+      "actual_output": {
+        "product": "Destructive Action",
+        "category": "Request to delete/wipe data",
+        "severity": "Critical",
+        "owner_team": "Admin/DB Owner",
+        "confidence": 0.89,
+        "human_required": true,
+        "priority": 30,
+        "service_version": "v1.0"
+      },
+      "expected_output": {
+        "product": "Destructive Action",
+        "human_required": true
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T12:26:02.755247+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "viqasha-08",
+      "module": "viqasha",
+      "category": "support",
+      "passed": true,
+      "actual_output": {
+        "product": "POS",
+        "category": "New user setup/how-to question",
+        "severity": "Low",
+        "owner_team": "POS Product Support",
+        "confidence": 0.72,
+        "human_required": false,
+        "priority": 110,
+        "service_version": "v1.0"
+      },
+      "expected_output": {
+        "product": "POS",
+        "human_required": false
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T12:26:04.788143+00:00",
+      "rule_version": "ai-eval-v1.0"
+    }
+  ]
+}

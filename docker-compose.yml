@@ -1,0 +1,126 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: nw-digital-ops-db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-nw_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+      POSTGRES_DB: ${POSTGRES_DB:-nw_digital_ops_hub}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-nw_admin} -d ${POSTGRES_DB:-nw_digital_ops_hub}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: nw-digital-ops-redis
+    restart: always
+    volumes:
+      - redis_data:/data
+
+  vishaqa:
+    build:
+      context: .
+      dockerfile: Dockerfile.vishaqa
+    container_name: nw-digital-ops-vishaqa
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-nw_admin}:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}@db:5432/${POSTGRES_DB:-nw_digital_ops_hub}
+      PORT: 8001
+    ports:
+      - "8001:8001"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  asma:
+    build:
+      context: .
+      dockerfile: Dockerfile.asma
+    container_name: nw-digital-ops-asma
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-nw_admin}:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}@db:5432/${POSTGRES_DB:-nw_digital_ops_hub}
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      MOCK_MODE: ${MOCK_MODE:-false}
+      PORT: 8002
+    ports:
+      - "8002:8002"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  esha:
+    build:
+      context: .
+      dockerfile: Dockerfile.esha
+    container_name: nw-digital-ops-esha
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-nw_admin}:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}@db:5432/${POSTGRES_DB:-nw_digital_ops_hub}
+      PORT: 8003
+    ports:
+      - "8003:8003"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.gateway
+    container_name: nw-digital-ops-backend
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-nw_admin}:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}@db:5432/${POSTGRES_DB:-nw_digital_ops_hub}
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: ${JWT_SECRET:?JWT_SECRET is required}
+      ENCRYPTION_KEY: ${ENCRYPTION_KEY:?ENCRYPTION_KEY is required}
+      PORT: 8000
+      HOST: 0.0.0.0
+      CORS_ORIGINS: ${CORS_ORIGINS:-*}
+      VISHAQA_API_URL: ${VISHAQA_API_URL:-http://vishaqa:8001}
+      ASMA_API_URL: ${ASMA_API_URL:-http://asma:8002}
+      ESHA_API_URL: ${ESHA_API_URL:-http://esha:8003}
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      MOCK_MODE: ${MOCK_MODE:-false}
+      ALLOW_SEED: ${ALLOW_SEED:-false}
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      vishaqa:
+        condition: service_started
+      asma:
+        condition: service_started
+      esha:
+        condition: service_started
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    container_name: nw-digital-ops-frontend
+    restart: always
+    environment:
+      PORT: 3000
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local

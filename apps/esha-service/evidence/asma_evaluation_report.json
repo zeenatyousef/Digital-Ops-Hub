@@ -1,0 +1,419 @@
+{
+  "summary": {
+    "total_cases": 7,
+    "passed": 7,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "corrections_logged": 0,
+    "by_category": {
+      "marketing": {
+        "total": 7,
+        "passed": 7
+      }
+    },
+    "rule_version": "ai-eval-v1.0",
+    "generated_at": "2026-08-27T06:26:14.861817+00:00"
+  },
+  "results": [
+    {
+      "case_id": "asma-brief-01",
+      "module": "asma",
+      "category": "marketing",
+      "passed": true,
+      "actual_output": {
+        "campaign_brief_id": "e4ef7b0a-b6ff-4cb8-82ab-37a5e65e8c72",
+        "objective": {
+          "value": "Ramadan promo for bakery",
+          "confidence": 0.95,
+          "source_message_ids": [
+            "b83e252a-5186-41c9-ab15-f325401bb4ae",
+            "fb3b3cb0-d36b-43b2-91ee-280d994002d8"
+          ]
+        },
+        "audience": {
+          "value": "families",
+          "confidence": 0.95,
+          "source_message_ids": [
+            "b83e252a-5186-41c9-ab15-f325401bb4ae",
+            "fb3b3cb0-d36b-43b2-91ee-280d994002d8"
+          ]
+        },
+        "location": {
+          "value": "Lahore",
+          "confidence": 0.95,
+          "source_message_ids": [
+            "b83e252a-5186-41c9-ab15-f325401bb4ae",
+            "fb3b3cb0-d36b-43b2-91ee-280d994002d8"
+          ]
+        },
+        "offer": {
+          "value": null,
+          "confidence": 0.0,
+          "source_message_ids": [
+            "b83e252a-5186-41c9-ab15-f325401bb4ae",
+            "fb3b3cb0-d36b-43b2-91ee-280d994002d8"
+          ]
+        },
+        "dates": {
+          "value": null,
+          "confidence": 0.0,
+          "source_message_ids": [
+            "b83e252a-5186-41c9-ab15-f325401bb4ae",
+            "fb3b3cb0-d36b-43b2-91ee-280d994002d8"
+          ]
+        },
+        "deliverables": {
+          "value": null,
+          "confidence": 0.0,
+          "source_message_ids": [
+            "b83e252a-5186-41c9-ab15-f325401bb4ae",
+            "fb3b3cb0-d36b-43b2-91ee-280d994002d8"
+          ]
+        },
+        "platforms": {
+          "value": "Instagram, Facebook",
+          "confidence": 0.95,
+          "source_message_ids": [
+            "b83e252a-5186-41c9-ab15-f325401bb4ae",
+            "fb3b3cb0-d36b-43b2-91ee-280d994002d8"
+          ]
+        },
+        "assets": {
+          "value": null,
+          "confidence": 0.0,
+          "source_message_ids": [
+            "b83e252a-5186-41c9-ab15-f325401bb4ae",
+            "fb3b3cb0-d36b-43b2-91ee-280d994002d8"
+          ]
+        },
+        "missing_fields": [
+          "offer",
+          "dates",
+          "deliverables",
+          "assets"
+        ],
+        "status": "pending"
+      },
+      "expected_output": {
+        "missing_fields_subset": [
+          "offer"
+        ]
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T06:25:40.052874+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "asma-calendar-daily-01",
+      "module": "asma",
+      "category": "marketing",
+      "passed": true,
+      "actual_output": {
+        "campaign_brief_id": "ab947987-27e4-433a-8a5f-967d7e361459",
+        "items": [
+          {
+            "id": "39ea6a09-1bc7-4439-9c38-6aad2fca8a3f",
+            "scheduled_date": "2026-09-01T00:00:00",
+            "platform": "instagram",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-08-30T00:00:00",
+            "status": "draft",
+            "owner": null
+          },
+          {
+            "id": "6bbaac86-6640-4a7e-9bbb-8b69f4a1fc69",
+            "scheduled_date": "2026-09-01T00:00:00",
+            "platform": "facebook",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-08-30T00:00:00",
+            "status": "draft",
+            "owner": null
+          },
+          {
+            "id": "fdd61a49-01aa-4a68-a9e8-124753423350",
+            "scheduled_date": "2026-09-02T00:00:00",
+            "platform": "instagram",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-08-31T00:00:00",
+            "status": "draft",
+            "owner": null
+          },
+          {
+            "id": "d1f5c64c-be43-466a-b889-e94818e95523",
+            "scheduled_date": "2026-09-02T00:00:00",
+            "platform": "facebook",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-08-31T00:00:00",
+            "status": "draft",
+            "owner": null
+          },
+          {
+            "id": "b430f37e-d092-4714-909c-ffea0e7484a4",
+            "scheduled_date": "2026-09-03T00:00:00",
+            "platform": "instagram",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-09-01T00:00:00",
+            "status": "draft",
+            "owner": null
+          },
+          {
+            "id": "d52fb88c-4390-42cd-b4ba-286990608162",
+            "scheduled_date": "2026-09-03T00:00:00",
+            "platform": "facebook",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-09-01T00:00:00",
+            "status": "draft",
+            "owner": null
+          }
+        ]
+      },
+      "expected_output": {
+        "expected_item_count": 6,
+        "production_lead_days": 2
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T06:25:42.218123+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "asma-calendar-3xweek-01",
+      "module": "asma",
+      "category": "marketing",
+      "passed": true,
+      "actual_output": {
+        "campaign_brief_id": "ab947987-27e4-433a-8a5f-967d7e361459",
+        "items": [
+          {
+            "id": "860faeff-d429-49a7-a3ce-c68614db2e3e",
+            "scheduled_date": "2026-09-02T00:00:00",
+            "platform": "linkedin",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-08-31T00:00:00",
+            "status": "draft",
+            "owner": null
+          },
+          {
+            "id": "1f18fb69-3210-47be-a136-5dc339db2088",
+            "scheduled_date": "2026-09-04T00:00:00",
+            "platform": "linkedin",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-09-02T00:00:00",
+            "status": "draft",
+            "owner": null
+          },
+          {
+            "id": "fe036355-c776-4417-bc5f-6b803e05ed8d",
+            "scheduled_date": "2026-09-07T00:00:00",
+            "platform": "linkedin",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-09-05T00:00:00",
+            "status": "draft",
+            "owner": null
+          },
+          {
+            "id": "48a6aca8-78ac-4d04-aa05-b208afbbc982",
+            "scheduled_date": "2026-09-09T00:00:00",
+            "platform": "linkedin",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-09-07T00:00:00",
+            "status": "draft",
+            "owner": null
+          },
+          {
+            "id": "0a19c96f-fb6f-482c-8b97-c35a0b8c30e6",
+            "scheduled_date": "2026-09-11T00:00:00",
+            "platform": "linkedin",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-09-09T00:00:00",
+            "status": "draft",
+            "owner": null
+          },
+          {
+            "id": "86daec5a-e2b2-46ac-bd90-6212244411be",
+            "scheduled_date": "2026-09-14T00:00:00",
+            "platform": "linkedin",
+            "objective": "Ramadan promo",
+            "content_ref": null,
+            "design_ref": null,
+            "deadline": "2026-09-12T00:00:00",
+            "status": "draft",
+            "owner": null
+          }
+        ]
+      },
+      "expected_output": {
+        "expected_item_count": 6
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T06:25:44.287640+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "asma-content-01",
+      "module": "asma",
+      "category": "marketing",
+      "passed": true,
+      "actual_output": {
+        "campaign_brief_id": "ab947987-27e4-433a-8a5f-967d7e361459",
+        "versions": [
+          {
+            "platform": "instagram",
+            "caption": "\ud83c\udf19 Ramadan blessings in Lahore!\nGather the family for a halal feast \ud83c\udf1f\nShare smiles, share moments together.\n#Ramadan #LahoreFamily",
+            "cta": "Celebrate with us! \ud83c\udf89",
+            "hashtags_ref": null,
+            "word_count": 24,
+            "brand_rule_check": {
+              "policy_risk": "none",
+              "prohibited_terms_found": [],
+              "missing_required_wording": []
+            }
+          },
+          {
+            "platform": "facebook",
+            "caption": "Ramadan Kareem to all our Lahore families! \ud83c\udf19\u2728 We're excited to share a warm, halal gathering spot for your loved ones this season.\nCome together, enjoy delicious meals, and create lasting memories with us. Your community, your table.",
+            "cta": "Visit our Lahore location today and celebrate Ramadan with your family.",
+            "hashtags_ref": null,
+            "word_count": 49,
+            "brand_rule_check": {
+              "policy_risk": "none",
+              "prohibited_terms_found": [],
+              "missing_required_wording": []
+            }
+          },
+          {
+            "platform": "linkedin",
+            "caption": "This Ramadan, AI\u2011Eval Test Brand is proud to support families in Lahore with our community\u2011focused, halal solutions. As we celebrate this season of togetherness, we invite you to join our initiatives that bring convenience and peace of mind to your household. Together, we can make this holy month meaningful for every family.",
+            "cta": "Contact us to discover how our halal offerings can benefit your family this Ramadan.",
+            "hashtags_ref": null,
+            "word_count": 66,
+            "brand_rule_check": {
+              "policy_risk": "none",
+              "prohibited_terms_found": [],
+              "missing_required_wording": []
+            }
+          }
+        ]
+      },
+      "expected_output": {
+        "required_wording": "halal"
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T06:26:01.123250+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "asma-translate-01",
+      "module": "asma",
+      "category": "marketing",
+      "passed": true,
+      "actual_output": {
+        "content_version_id": "085bfa23-d688-43c5-aa2f-ea8c6a259aeb",
+        "translated_text": "\ud83c\udf19 Ramadan vibes in Lahore!\n\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 Khandani lamhe, halal lutf.\n\u2728 Saath mil kar jashn manayein, khushi baantain.\n\nCTA: Daawat join karne ke liye tap karein!",
+        "target_language": "ur-Latn",
+        "ambiguous_term_warnings": [
+          "vibes"
+        ]
+      },
+      "expected_output": {
+        "source_caption": "\ud83c\udf19 Ramadan vibes in Lahore!\n\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 Family moments, halal delights.\n\u2728 Celebrate together, share the joy."
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T06:26:06.804184+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "asma-designer-brief-01",
+      "module": "asma",
+      "category": "marketing",
+      "passed": true,
+      "actual_output": {
+        "designer_brief_id": "909534bc-2fab-4445-9366-334f7f2b3c8e",
+        "main_heading": "Ramadan Vibes",
+        "supporting_text": "Family moments and halal delights in Lahore\u2014celebrate together and share the joy.",
+        "cta": "Tap to join the feast!",
+        "visual_direction": "Warm, inviting night scene with soft moonlight hues, deep blues and gold accents; a family gathered around a table of traditional dishes, subtle lanterns glowing; composition balanced with heading space at top and CTA space at bottom, focus on smiling faces.",
+        "asset_references": [
+          "asset-ramadan-01",
+          "asset-ramadan-02"
+        ],
+        "sizes": [
+          "1080x1080 square",
+          "1080x1350 portrait",
+          "1080x1920 story"
+        ],
+        "logo_qr_rules": "Place the brand logo in the top\u2011left corner with at least 10\u202fpx clear space; keep logo size no larger than 15% of canvas width. No QR code needed.",
+        "restrictions": "Do not exceed 20% text overlay per Instagram guidelines; avoid non\u2011halal food imagery; ensure visuals respect Ramadan customs; use only royalty\u2011free or cleared images."
+      },
+      "expected_output": {
+        "approved_media_ids": [
+          "asset-ramadan-01",
+          "asset-ramadan-02"
+        ]
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T06:26:11.107309+00:00",
+      "rule_version": "ai-eval-v1.0"
+    },
+    {
+      "case_id": "asma-revise-01",
+      "module": "asma",
+      "category": "marketing",
+      "passed": true,
+      "actual_output": {
+        "new_content_version_id": "022b795c-9c54-4534-b765-4b21d3a05060",
+        "version_number": 15,
+        "diff_summary": "+ 0300-1234567"
+      },
+      "expected_output": {
+        "source_content_version_id": "3c23daa3-b592-4446-b7fd-1a69b880b562",
+        "source_version_number": 1
+      },
+      "confidence": null,
+      "correction": null,
+      "correction_reason": null,
+      "corrected_by": null,
+      "evaluated_at": "2026-08-27T06:26:14.861262+00:00",
+      "rule_version": "ai-eval-v1.0"
+    }
+  ]
+}
